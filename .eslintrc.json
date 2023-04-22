@@ -11,7 +11,7 @@
 		"SharedArrayBuffer": "readonly"
 	},
 	"parserOptions": {
-		"ecmaVersion": 2015
+		"ecmaVersion": 2018
 	},
 	"plugins": ["prettier"],
 	"ignorePatterns": [".eslintrc.json", ".gitignore", "dist", "node_modules"],
@@ -24,9 +24,11 @@
 			}
 		],
 		"no-unused-vars": "warn",
-		"no-console": "warn",
+		"no-console": "off",
 		"array-bracket-newline": "off",
 		"array-element-newline": "off",
-		"camelcase": "off"
+		"camelcase": "off",
+		"multiline-comment-style": ["error", "starred-block"],
+		"no-inline-comments": "off"
 	}
 }
