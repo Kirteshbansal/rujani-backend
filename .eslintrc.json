@@ -1,0 +1,32 @@
+{
+	"root": true,
+	"env": {
+		"commonjs": true,
+		"es6": true,
+		"node": true
+	},
+	"extends": ["airbnb-base", "prettier", "plugin:node/recommended"],
+	"globals": {
+		"Atomics": "readonly",
+		"SharedArrayBuffer": "readonly"
+	},
+	"parserOptions": {
+		"ecmaVersion": 2015
+	},
+	"plugins": ["prettier"],
+	"ignorePatterns": [".eslintrc.json", ".gitignore", "dist", "node_modules"],
+	"rules": {
+		"indent": ["error", "tab"],
+		"prettier/prettier": [
+			2,
+			{
+				"useTabs": true
+			}
+		],
+		"no-unused-vars": "warn",
+		"no-console": "warn",
+		"array-bracket-newline": "off",
+		"array-element-newline": "off",
+		"camelcase": "off"
+	}
+}
