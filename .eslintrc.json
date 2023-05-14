@@ -11,10 +11,10 @@
 		"SharedArrayBuffer": "readonly"
 	},
 	"parserOptions": {
-		"ecmaVersion": 2018
+		"ecmaVersion": 13
 	},
 	"plugins": ["prettier"],
-	"ignorePatterns": [".eslintrc.json", ".gitignore", "dist", "node_modules"],
+	"ignorePatterns": [".eslintrc.json", ".gitignore", "dist", "node_modules", "package*.json", "readme.md"],
 	"rules": {
 		"indent": ["error", "tab"],
 		"prettier/prettier": [
