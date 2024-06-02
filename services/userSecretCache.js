@@ -37,7 +37,7 @@ class CacheUserSecret {
 		return this.cache.keys(convertNumToStr(userId));
 	}
 
-	clearCache(userId) {
+	clearCache() {
 		this.cache.flushAll();
 	}
 }
