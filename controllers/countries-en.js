@@ -7,12 +7,11 @@ exports.searchENCountries = async (req, res) => {
 		if (!query.length) res.status(400).json({ status: false, message: "Incorrect query input" });
 		const startIndex = page * limit - limit;
 		const endIndex = startIndex + limit;
-		// console.log("data :>> ", data);
-		const filteredCountries = data
-			.filter((c) => containsSubstring(query, c?.name) && c)
-			?.slice(startIndex, endIndex);
+		let filteredCountries = data.filter((c) => containsSubstring(query, c?.name) && c);
 		const totalPages = Math.ceil(filteredCountries.length / limit);
-		const response = { data: filteredCountries || [], page, limit, totalPages, query };
+		const totalItems = filteredCountries.length;
+		filteredCountries = filteredCountries.slice(startIndex, endIndex);
+		const response = { data: filteredCountries || [], page, limit, totalPages, query, totalItems };
 
 		res.status(200).json(response);
 	} catch (err) {
